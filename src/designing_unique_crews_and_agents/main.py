@@ -17,17 +17,18 @@ def run():
     Run the crew.
     """
 inputs = {
-        'type' : 'sample_value',
+        'type' : '1',
         'market_data_url': 'sample_value',
         'research_focus': 'sample_value'
    }
+first_value = list(inputs.values())[0]
 
-if type == "1":
-        print(f"hello type2 {type}")
+if first_value == "1":
+        print(f"hello type1 {first_value}")
         DesigningUniqueCrewsAndAgentsCrew().crew().kickoff(inputs=inputs)
 
-elif type == "2":
-        print(f"hello type2 {type}")
+elif first_value == "2":
+        print(f"hello type2 {first_value}")
 
         inputs = {
             'market_data_url': 'trial 2',
@@ -36,17 +37,16 @@ elif type == "2":
         DesignCrew().crew().kickoff(inputs=inputs)
 
 
-elif type == "3":
-        print(f"hello type3 {type}")
+elif first_value == "3":
+        print(f"hello type3 {first_value}")
 
         inputs = {
             'market_data_url': 'trial 3',
         }
         Design2Crew().crew().kickoff(inputs=inputs)
 
-
 else:
-        print(f"hello type3 {type}")
+        print(f"hello type4 {first_value}")
         print("wrong task")
 
 
@@ -92,7 +92,6 @@ def replay():
 
     elif task_id == "3":
         print(f"hello task2 {task_id}")
-
         inputs = {
             'market_data_url': 'trial 3',
         }
